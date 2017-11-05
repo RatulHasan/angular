@@ -1,0 +1,9 @@
+<h1>
+  {{ title }}
+</h1>
+
+<ul>
+    <li *ngFor='let item of videoList'>
+        <a routerLink='{{ item.slug}}' style="color: green"> {{ item.name }} </a>
+    </li>
+</ul>
