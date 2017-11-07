@@ -14,6 +14,7 @@ import { VideoListComponent } from './video-list/video-list.component';
 import { VideoDetailComponent } from './video-detail/video-detail.component';
 import { HomeComponent } from './home/home.component';
 import { TodoComponent } from './todo/todo.component';
+import { SaveTodoComponent } from './save-todo/save-todo.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { TodoComponent } from './todo/todo.component';
     VideoListComponent,
     VideoDetailComponent,
     HomeComponent,
-    TodoComponent
+    TodoComponent,
+    SaveTodoComponent
   ],
   imports: [
       BrowserModule,

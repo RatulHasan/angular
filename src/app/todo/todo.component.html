@@ -1,6 +1,9 @@
 <div class="col-md-12">
   <div class="panel panel-success">
-    <div class="panel-heading">Your ToDo list</div>
+    <div class="panel-heading">
+        Your ToDo list
+        <a routerLink="/todo-save" class="btn btn-primary btn-sm pull-right">Add todo</a>
+    </div>
 
     <div class="panel-body">
       <table class="table table-responsive table-bordered">
@@ -17,13 +20,13 @@
         <tbody>
         <tr *ngFor="let todo of todos">
           <td>
-            <input class="form-control input-sm" type="checkbox" value="1" />
+            <input class="form-control input-sm" (click)="update_status(todo.id)" type="checkbox" value="1" />
           </td>
           <td>{{ todo.todo }}</td>
           <td>{{ todo.date_and_time }}</td>
           <td>{{ todo.priority }}</td>
           <td>{{ todo.status }}</td>
-          <td><span class="btn btn-danger btn-sm glyphicon glyphicon-trash"></span> </td>
+          <td><span class="btn btn-danger btn-sm glyphicon glyphicon-trash" (click)="delete_todo(todo.id)"></span> </td>
         </tr>
         </tbody>
       </table>
